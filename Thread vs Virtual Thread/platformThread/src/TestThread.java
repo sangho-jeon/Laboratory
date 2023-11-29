@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class TestThread {
+public class TestThread extends Thread{
+
 }
