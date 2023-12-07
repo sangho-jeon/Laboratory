@@ -1,10 +1,10 @@
 package Semaphore;
 
-public class ThreadRunner implements Runnable{
+public class SemaphoreTestThread implements Runnable{
 
     private SharedResource sharedResource;
 
-    public ThreadRunner(SharedResource sharedResource){
+    public SemaphoreTestThread(SharedResource sharedResource){
         this.sharedResource = sharedResource;
     }
 
