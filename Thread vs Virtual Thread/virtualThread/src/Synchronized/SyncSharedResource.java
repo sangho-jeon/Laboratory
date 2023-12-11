@@ -1,27 +1,18 @@
-package Semaphore;
+package Synchronized;
 
 import java.util.Arrays;
-import java.util.concurrent.Semaphore;
 
-public class SharedResource {
-    private final Semaphore semaphore;
+public class SyncSharedResource {
     private int counter;
 
-    public SharedResource(int cnt) {
-        this.semaphore = new Semaphore(cnt);
+    public SyncSharedResource(int cnt) {
         this.counter = 0;
     }
 
     public void use() throws InterruptedException {
         System.out.println(Thread.currentThread().threadId() + " entering in state " + Thread.currentThread().getState());
-        semaphore.acquire(); // 세마포어 리소스 확보4
         System.out.println("Getting In thread no: " + Thread.currentThread().threadId() + " state: " + Thread.currentThread().getState() );
-//        doUse();
-        try {
-            doUse();
-        } finally {
-            semaphore.release(); // 세마포어 리소스 해제
-        }
+        doUse();
     }
 
     private synchronized void doUse() throws InterruptedException {

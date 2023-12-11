@@ -1,16 +1,17 @@
-package Semaphore;
+package Synchronized;
 
-public class SemaphoreTestThread implements Runnable{
+public class SynchronizedTestThread implements Runnable{
 
-    private SharedResource sharedResource;
+    private SyncSharedResource sharedResource;
 
-    public SemaphoreTestThread(SharedResource sharedResource){
+    public SynchronizedTestThread(SyncSharedResource sharedResource){
         this.sharedResource = sharedResource;
+
     }
 
     @Override
     public void run() {
-
+    
         System.out.println("virtual thread name " + Thread.currentThread().threadId());
         System.out.println("virtual thread is virtual " + Thread.currentThread().isVirtual());
         System.out.println("virtual thread state " + Thread.currentThread().getState());
