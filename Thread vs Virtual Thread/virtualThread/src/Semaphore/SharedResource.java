@@ -28,6 +28,6 @@ public class SharedResource {
         System.out.println("count: " + counter++);
         System.out.println("After thread no: " + Thread.currentThread().threadId() + " state: " + Thread.currentThread().getState() );
         System.out.println(Arrays.toString(Thread.currentThread().getStackTrace()));
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
     }
 }

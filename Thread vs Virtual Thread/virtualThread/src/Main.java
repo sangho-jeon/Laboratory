@@ -15,8 +15,6 @@ public class Main {
 //        syncCaseTestRunner.run();
         CaseTestRunner caseTestRunner = new CaseTestRunner();
         caseTestRunner.run();
-        Thread.sleep(100000000);
-        System.out.println("dead?");
-        Thread.sleep(100000000);
+//        Thread.sleep(100000);
     }
 }
