@@ -1,11 +1,11 @@
-package Semaphore;
+package ReentrantLock;
 
 public class SemaphoreTestThread implements Runnable{
 
-    private SyncSharedResource sharedResource;
+    private ReentrantSharedResource reentrantSharedResource;
 
-    public SemaphoreTestThread(SyncSharedResource sharedResource){
-        this.sharedResource = sharedResource;
+    public SemaphoreTestThread(ReentrantSharedResource sharedResource){
+        this.reentrantSharedResource = sharedResource;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class SemaphoreTestThread implements Runnable{
         System.out.println("virtual thread state " + Thread.currentThread().getState());
         System.out.println(Thread.currentThread().toString());
         try {
-            sharedResource.use();
+            reentrantSharedResource.use();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

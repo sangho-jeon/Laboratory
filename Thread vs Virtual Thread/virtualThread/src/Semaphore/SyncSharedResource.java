@@ -3,11 +3,11 @@ package Semaphore;
 import java.util.Arrays;
 import java.util.concurrent.Semaphore;
 
-public class SharedResource {
+public class SyncSharedResource {
     private final Semaphore semaphore;
     private int counter;
 
-    public SharedResource(int cnt) {
+    public SyncSharedResource(int cnt) {
         this.semaphore = new Semaphore(cnt);
         this.counter = 0;
     }
